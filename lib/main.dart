@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // HomePage 위치에 따라 경로 수정
+// 페이지 import
+import 'package:flutter_train_app/pages/home_page.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TrainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// 앱의 루트 위젯
+class TrainApp extends StatelessWidget {
+  const TrainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '기차 예매 앱',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        scaffoldBackgroundColor: Colors.white,
-        useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const HomePage(), // 첫 화면으로 HomePage 연결
+      debugShowCheckedModeBanner: false, // 오른쪽 상단 debug 배너 제거
     );
   }
 }
