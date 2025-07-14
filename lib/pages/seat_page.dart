@@ -77,7 +77,6 @@ class _SeatPageState extends State<SeatPage> {
             Text('출발역: ${widget.departureStation}'),
             Text('도착역: ${widget.arrivalStation}'),
             const SizedBox(height: 16),
-            const Text('‼️ 출발역과 도착역이 같습니다.'),
             const SizedBox(height: 16),
             Wrap(
               spacing: 8,
