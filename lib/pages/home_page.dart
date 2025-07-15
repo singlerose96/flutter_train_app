@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> {
         context,
         MaterialPageRoute(
           builder: (_) => SeatPage(
-            departureStation: departureStation!,
-            arrivalStation: arrivalStation!,
+            departure: departureStation!,
+            arrival: arrivalStation!,
           ),
         ),
       );
@@ -141,8 +141,9 @@ class _HomePageState extends State<HomePage> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: _navigateToSeatPage,
-
+                onPressed: (departureStation != null && arrivalStation != null)
+                    ? _navigateToSeatPage
+                    : null,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.purple, // 🟣 7: 버튼 배경색
                   shape: RoundedRectangleBorder(
