@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// 페이지 import
 import 'package:flutter_train_app/pages/home_page.dart';
 
 
